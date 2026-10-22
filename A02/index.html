@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyberpunk: Edgerunners Character and Megacorporation Dex">
+  <title>Cyberpunk: Edgerunners</title>
+
+  <!-- Google Fonts: Orbitron (Display), Rajdhani (Body), Share Tech Mono (HUD/Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Ambient CRT Scanlines: Decorative overlay creating a retro display effect -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="site-wrapper">
+    <!-- Header: Dynamic HUD status bar, title and series overview -->
+    <header id="page-header" class="site-header">
+      <div class="header-inner">
+        <div class="hud-bar" aria-hidden="true">
+          <span class="hud-status">// NC_NET_ARCHIVE_v2.077</span>
+          <span class="hud-status">// STATUS: ONLINE</span>
+        </div>
+        <h1 id="series-title" class="series-title">
+          <span id="title-text">Cyberpunk: Edgerunners</span>
+          <span class="blink-cursor" aria-hidden="true">_</span>
+        </h1>
+        <p id="series-tagline" class="series-tagline"></p>
+        <p id="series-intro" class="series-intro"></p>
+      </div>
+    </header>
+
+    <!-- Main Content Container: Dynamically populated with character and corporation sections -->
+    <main id="app" class="app-main" aria-live="polite">
+      <!-- Loading Indicator: Displayed until JSON data finishes loading -->
+      <div id="loading-state" class="status-box">
+        <span class="status-indicator"></span>
+        <p>INITIALIZING DATA STREAM...</p>
+      </div>
+    </main>
+
+    <!-- Footer: Series notes and metadata -->
+    <footer id="page-footer" class="site-footer">
+      <p id="footer-note" class="footer-note"></p>
+    </footer>
+  </div>
+
+  <!-- Detail Modal Dialog: Accessible popup displaying full dossiers for characters and corporations -->
+  <div id="modal-backdrop" class="modal-backdrop" hidden>
+    <div id="detail-modal" class="cyber-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+      tabindex="-1">
+      <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Close profile">✕</button>
+
+      <div id="modal-content" class="modal-content">
+        <!-- Dynamically injected profile dossier content -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

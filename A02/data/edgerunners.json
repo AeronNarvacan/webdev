@@ -1,0 +1,455 @@
+{
+  "series": {
+    "title": "Cyberpunk: Edgerunners",
+    "tagline": "Dreams burn bright in Night City.",
+    "intro": "Meet the people and powers shaping life in Night City, from street-level edgerunners to the corporations that control the city. Select a card to explore each profile.",
+    "footerNote": "Unofficial fan project. Cyberpunk: Edgerunners and Cyberpunk 2077 belong to their respective rights holders."
+  },
+  "sections": [
+    {
+      "id": "season1",
+      "title": "Season 1 Cast",
+      "type": "character",
+      "entries": [
+        {
+          "id": "david-martinez",
+          "number": 1,
+          "name": "David Martinez",
+          "alias": "David",
+          "tagline": "A determined street kid who pushes his limits.",
+          "role": "Solo Edgerunner",
+          "affiliation": "Maine's edgerunner crew",
+          "accentColor": "#00E5FF",
+          "background": "David is a student at the prestigious Arasaka Academy, despite coming from a family with limited means. After a personal tragedy, he turns toward Night City's mercenary underworld and discovers that his unusual tolerance for cyberware may change his future.",
+          "personality": {
+            "traits": [
+              "Determined",
+              "Protective",
+              "Impulsive"
+            ],
+            "summary": "David wants to make something of himself and often puts other people's needs ahead of his own limits."
+          },
+          "motivation": "He wants to build a life on his own terms and protect the people he comes to care about. He is also driven by a desire to prove that he can survive in a city designed to grind people down.",
+          "signature": [
+            "Sandevistan",
+            "Cybernetic arm enhancements"
+          ],
+          "relationships": [
+            {
+              "name": "Lucy",
+              "bond": "A close partner whose dream of escape gives David a new reason to keep going."
+            },
+            {
+              "name": "Maine",
+              "bond": "A mentor who introduces David to the edgerunner life."
+            },
+            {
+              "name": "Rebecca",
+              "bond": "A loyal crew member who backs David with blunt honesty and firepower."
+            }
+          ],
+          "definingMoments": [
+            "Enters the mercenary world after his life at the academy is upended.",
+            "Takes on increasingly demanding cyberware and jobs as his reputation grows."
+          ],
+          "fate": "David's escalating cyberware use culminates in a final confrontation with Adam Smasher. He dies in the encounter, while Lucy survives and reaches the Moon.",
+          "image": "assets/david-martinez.png"
+        },
+        {
+          "id": "lucy-kushinada",
+          "number": 2,
+          "name": "Lucy Kushinada",
+          "alias": "Lucy",
+          "tagline": "A gifted netrunner who dreams of leaving Night City behind.",
+          "role": "Netrunner",
+          "affiliation": "Maine's edgerunner crew; later works closely with David",
+          "accentColor": "#FF4FD8",
+          "background": "Lucy is a skilled netrunner with a guarded personality and a past tied to corporate exploitation. She works in Night City's underworld while keeping her deepest hopes and fears private.",
+          "personality": {
+            "traits": [
+              "Guarded",
+              "Independent",
+              "Loyal"
+            ],
+            "summary": "Lucy keeps people at a distance but becomes fiercely protective once she trusts someone."
+          },
+          "motivation": "She wants to escape the dangers and control of Night City and reach the Moon. She also tries to keep David away from the forces she believes will destroy him.",
+          "signature": [
+            "Netrunning cyberware",
+            "Monowire"
+          ],
+          "relationships": [
+            {
+              "name": "David Martinez",
+              "bond": "A romantic partner whose safety becomes central to her choices."
+            },
+            {
+              "name": "Maine",
+              "bond": "A crew leader who gives her a place among the edgerunners."
+            },
+            {
+              "name": "Kiwi",
+              "bond": "A fellow netrunner whose guarded professionalism mirrors her own."
+            }
+          ],
+          "definingMoments": [
+            "Meets David during a pickpocketing scheme on a Night City train.",
+            "Uses her netrunning skills to uncover threats linked to David's cyberware."
+          ],
+          "fate": "Lucy survives the series and reaches the Moon, but she is left grieving David.",
+          "image": "assets/lucy-kushinada.png"
+        },
+        {
+          "id": "rebecca",
+          "number": 3,
+          "name": "Rebecca",
+          "alias": "Rebecca",
+          "tagline": "A fearless gunfighter with a loud heart.",
+          "role": "Gunslinger",
+          "affiliation": "Maine's edgerunner crew",
+          "accentColor": "#FFB000",
+          "background": "Rebecca is an experienced member of Maine's crew who thrives in dangerous jobs and refuses to hide what she thinks. She lives with her brother Pilar and has little patience for people who underestimate her.",
+          "personality": {
+            "traits": [
+              "Fearless",
+              "Loyal",
+              "Outspoken"
+            ],
+            "summary": "Rebecca masks genuine affection with jokes, bravado, and a readiness to fight."
+          },
+          "motivation": "She wants to stay close to her crew and keep them alive, even when they make reckless choices. She also wants to be taken seriously as a capable edgerunner.",
+          "signature": [
+            "Custom firearms",
+            "Combat cyberware"
+          ],
+          "relationships": [
+            {
+              "name": "Pilar",
+              "bond": "Her brother and fellow edgerunner, whose antics test her patience."
+            },
+            {
+              "name": "David Martinez",
+              "bond": "A teammate she supports with teasing, loyalty, and unspoken affection."
+            },
+            {
+              "name": "Maine",
+              "bond": "A crew leader she respects and follows into dangerous work."
+            }
+          ],
+          "definingMoments": [
+            "Welcomes David into the crew in her own irreverent way.",
+            "Frequently backs up the team with aggressive, close-quarters gunplay."
+          ],
+          "fate": "Rebecca fights alongside David during the final battle. Adam Smasher kills her before David's last stand.",
+          "image": "assets/rebecca.png"
+        },
+        {
+          "id": "maine",
+          "number": 4,
+          "name": "Maine",
+          "alias": "Maine",
+          "tagline": "A powerful crew leader trying to stay in control.",
+          "role": "Crew leader",
+          "affiliation": "Edgerunner crew leader",
+          "accentColor": "#FF5A36",
+          "background": "Maine is a veteran edgerunner known for his strength, confidence, and leadership. He gives younger mercenaries work and guidance, but his reliance on cyberware puts pressure on his body and judgment.",
+          "personality": {
+            "traits": [
+              "Commanding",
+              "Generous",
+              "Proud"
+            ],
+            "summary": "Maine looks after his crew but struggles to accept limits on his own strength."
+          },
+          "motivation": "He wants to maintain his standing and provide for the people who depend on him. He resists the idea that his body and mind may no longer handle the chrome he uses.",
+          "signature": [
+            "Heavy cybernetic arms",
+            "Combat implants"
+          ],
+          "relationships": [
+            {
+              "name": "Dorio",
+              "bond": "His partner and trusted second-in-command."
+            },
+            {
+              "name": "David Martinez",
+              "bond": "A young recruit he mentors and treats as a potential successor."
+            },
+            {
+              "name": "Lucy",
+              "bond": "A skilled netrunner on whom his crew relies for digital support."
+            }
+          ],
+          "definingMoments": [
+            "Takes David under his wing and teaches him the risks of mercenary life.",
+            "Begins to lose control as cyberpsychosis threatens his ability to lead."
+          ],
+          "fate": "Maine's cyberpsychosis worsens during a job, and he dies after a violent breakdown rather than be captured.",
+          "image": "assets/maine.png"
+        },
+        {
+          "id": "adam-smasher",
+          "number": 5,
+          "name": "Adam Smasher",
+          "alias": "Smasher",
+          "tagline": "A corporate weapon with almost nothing human left.",
+          "role": "Arasaka's elite enforcer",
+          "affiliation": "Arasaka",
+          "accentColor": "#FF304F",
+          "background": "Adam Smasher is a notorious mercenary whose body has been replaced almost entirely by combat machinery. He serves Arasaka as an overwhelming force against people and threats the corporation wants eliminated.",
+          "personality": {
+            "traits": [
+              "Cruel",
+              "Arrogant",
+              "Relentless"
+            ],
+            "summary": "Smasher treats violence as a tool and shows contempt for anyone he considers weak."
+          },
+          "motivation": "He serves Arasaka's interests and seeks opportunities to use his overwhelming combat power. He has little regard for ordinary human life.",
+          "signature": [
+            "Full-body combat conversion",
+            "Heavy weapons"
+          ],
+          "relationships": [
+            {
+              "name": "Arasaka",
+              "bond": "The corporation that deploys him as an elite weapon."
+            },
+            {
+              "name": "David Martinez",
+              "bond": "An edgerunner whose final stand brings him into direct conflict with Smasher."
+            }
+          ],
+          "definingMoments": [
+            "Appears as the terrifying benchmark of corporate combat power.",
+            "Confronts David and the crew during the series' final battle."
+          ],
+          "fate": "Smasher kills David and Rebecca during the final confrontation. He survives and remains an active Arasaka enforcer.",
+          "image": "assets/adam-smasher.png"
+        }
+      ]
+    },
+    {
+      "id": "season2",
+      "title": "Season 2 Cast",
+      "type": "character",
+      "entries": [
+        {
+          "id": "weak-kingsley",
+          "number": 6,
+          "name": "Weak Kingsley",
+          "alias": "Weak",
+          "tagline": "A fallen edgerunner legend searching for purpose.",
+          "role": "Veteran edgerunner",
+          "affiliation": "Night City's mercenary",
+          "accentColor": "#8CFF4D",
+          "background": "Once known as King and celebrated as a veteran edgerunner at the top of his game, Weak now lives in the shadow of his former reputation. The official character profile says he must live without chrome as he searches for purpose.",
+          "personality": {
+            "traits": [
+              "Weathered",
+              "Searching",
+              "Experienced"
+            ],
+            "summary": "Weak is a once-renowned mercenary trying to find meaning after losing the life that defined him."
+          },
+          "motivation": "He searches for a renewed sense of purpose after his former life as a top edgerunner has passed him by.",
+          "signature": [
+            "Former cyberware-dependent combat style"
+          ],
+          "relationships": [
+            {
+              "name": "D",
+              "bond": "A fellow central figure whose revenge-driven path intersects with the season's story."
+            },
+            {
+              "name": "Roman Carax",
+              "bond": "A member of the new cast whose search for truth brings him near other people's."
+            }
+          ],
+          "definingMoments": [
+            "The official profile identifies him as a veteran once known as King.",
+            "He is forced to live without chrome while seeking a new purpose."
+          ],
+          "fate": "Unknown",
+          "image": "assets/weak-kingsley.png"
+        },
+        {
+          "id": "d",
+          "number": 7,
+          "name": "David",
+          "alias": "D",
+          "tagline": "A Snake Nation netrunner driven by revenge.",
+          "role": "Netrunner",
+          "affiliation": "Snake Nation",
+          "accentColor": "#43A6FF",
+          "background": "D is a netrunner from Snake Nation with sharp technical skills. The official character profile says he hunts the killer who wiped out his clan.",
+          "personality": {
+            "traits": [
+              "Technical",
+              "Driven",
+              "Vengeful"
+            ],
+            "summary": "D channels his technical ability into a personal hunt for the person responsible for his clan's destruction."
+          },
+          "motivation": "He seeks revenge for the destruction of his clan and follows a trail that brings him close to corporate secrets.",
+          "signature": [
+            "Netrunning cyberware"
+          ],
+          "relationships": [
+            {
+              "name": "Weak Kingsley",
+              "bond": "A fellow central character whose search for purpose runs alongside D's revenge quest."
+            },
+            {
+              "name": "Talia Yang",
+              "bond": "A member of the new cast whose background connects her to Maelstrom."
+            }
+          ],
+          "definingMoments": [
+            "Sets out to hunt the killer responsible for wiping out his clan.",
+            "His pursuit brings him close to secrets that powerful corporations want hidden."
+          ],
+          "fate": "Unknown",
+          "image": "assets/d.png"
+        },
+        {
+          "id": "roman-carax",
+          "number": 8,
+          "name": "Roman Carax",
+          "alias": "Roman",
+          "tagline": "A cinephile trying to record the truth of Night City.",
+          "role": "Cinephile and Filmmaker",
+          "affiliation": "Independent",
+          "accentColor": "#FFD166",
+          "background": "Roman is a young cinephile living in a city where traditional film has been displaced by braindance. He is obsessed with documenting real stories and follows other people's lives in search of truth.",
+          "personality": {
+            "traits": [
+              "Curious",
+              "Observant",
+              "Idealistic"
+            ],
+            "summary": "Roman believes recording reality can reveal the truth, even when the truth is painful and complicated."
+          },
+          "motivation": "He wants to document real lives rather than settle for manufactured spectacle. His pursuit forces him to confront how messy and unresolved real events can be.",
+          "signature": [
+            "Recording equipment"
+          ],
+          "relationships": [
+            {
+              "name": "Weak Kingsley",
+              "bond": "A central figure whose past and present make him part of Night City's wider story."
+            },
+            {
+              "name": "D",
+              "bond": "A central figure whose revenge quest exposes Roman to dangerous realities."
+            }
+          ],
+          "definingMoments": [
+            "Shadows other people's lives to document stories as they happen.",
+            "Learns that real events rarely resolve as neatly as the films he admires."
+          ],
+          "fate": "Unknown",
+          "image": "assets/roman-carax.png"
+        },
+        {
+          "id": "talia-yang",
+          "number": 9,
+          "name": "Talia Yang",
+          "alias": "Talia",
+          "tagline": "An independent survivor shaped by Maelstrom's violent culture.",
+          "role": "Chrome-obsessed",
+          "affiliation": "Maelstrom",
+          "accentColor": "#C77DFF",
+          "background": "Talia was raised in corpo towers before being hardened by Maelstrom's world. Her official profile describes her as fiercely independent and steeped in the gang's violent, chrome-obsessed culture.",
+          "personality": {
+            "traits": [
+              "Independent",
+              "Hard-edged",
+              "Defiant"
+            ],
+            "summary": "Talia is shaped by a harsh environment but insists on making her own choices."
+          },
+          "motivation": "She strives to maintain her independence in a world shaped by corporate privilege, gang violence, and cybernetic power.",
+          "signature": [
+            "Chrome-heavy cyberware"
+          ],
+          "relationships": [
+            {
+              "name": "D",
+              "bond": "A member of the new cast whose path is driven by a personal vendetta."
+            },
+            {
+              "name": "Weak Kingsley",
+              "bond": "A fellow central figure in the season's new story."
+            }
+          ],
+          "definingMoments": [
+            "Moves from a childhood in corpo towers into Maelstrom's violent culture.",
+            "Carries the gang's chrome-obsessed outlook while asserting her independence."
+          ],
+          "fate": "Unknown",
+          "image": "assets/talia-yang.png"
+        }
+      ]
+    },
+    {
+      "id": "corps",
+      "title": "The Corporations",
+      "type": "corporation",
+      "entries": [
+        {
+          "id": "arasaka",
+          "number": 10,
+          "name": "Arasaka",
+          "tagline": "A global power built on security, influence, and control.",
+          "accentColor": "#FF3B4F",
+          "knownFor": "Arasaka is a megacorporation associated with security services, military-grade technology, corporate intelligence, and advanced cybernetics. Its influence reaches deeply into Night City's institutions and private lives.",
+          "reputation": "It is feared for its reach, secrecy, and willingness to use overwhelming force to protect its interests. In Night City, its prestige comes with a reputation for ruthless control.",
+          "roleInStory": "Arasaka's academy, technology, and security apparatus shape David's early life and the dangers surrounding the crew. Adam Smasher represents the corporation's capacity to deploy extreme violence.",
+          "connectedCharacters": [
+            "david-martinez",
+            "lucy-kushinada",
+            "adam-smasher"
+          ],
+          "keyFacts": [
+            "A major global megacorporation in the Cyberpunk setting.",
+            "Its interests and security forces are central to the conflict in Edgerunners."
+          ],
+          "image": "assets/arasaka.png"
+        },
+        {
+          "id": "militech",
+          "number": 11,
+          "name": "Militech",
+          "tagline": "A military-industrial giant competing for power.",
+          "accentColor": "#4DA3FF",
+          "knownFor": "Militech is a major weapons manufacturer and military contractor in the Cyberpunk setting. Its business centers on arms, defense technology, and security-related operations.",
+          "reputation": "Militech is seen as heavily armed, politically influential, and closely tied to military power. It is a major rival to Arasaka in the wider Cyberpunk world.",
+          "roleInStory": "Militech helps establish the wider corporate arms race and militarized environment surrounding Night City. Its role is more contextual than the direct character ties of Arasaka in the anime.",
+          "connectedCharacters": [],
+          "keyFacts": [
+            "A major rival megacorporation to Arasaka in Cyberpunk lore.",
+            "Its identity is strongly associated with weapons and military contracting."
+          ],
+          "image": "assets/militech.png"
+        },
+        {
+          "id": "kang-tao",
+          "number": 12,
+          "name": "Kang Tao",
+          "tagline": "A technology corporation known for smart weapons.",
+          "accentColor": "#38F2B3",
+          "knownFor": "Kang Tao is a major arms and technology corporation in the wider Cyberpunk setting, especially associated with smart weapons and advanced weapons systems.",
+          "reputation": "It is a powerful competitor in the weapons market, known for sophisticated technology rather than the same public profile as Arasaka in Edgerunners.",
+          "roleInStory": "Kang Tao provides background context for the crowded corporate weapons market around Night City. Its direct on-screen importance in Edgerunners is limited, so this profile relies mainly on wider Cyberpunk lore.",
+          "connectedCharacters": [],
+          "keyFacts": [
+            "Associated with smart weapons and advanced arms technology.",
+            "Included as wider-world context; its role in the anime is limited."
+          ],
+          "image": "assets/kang-tao.png"
+        }
+      ]
+    }
+  ]
+}
