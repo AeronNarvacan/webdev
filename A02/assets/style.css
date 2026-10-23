@@ -1138,32 +1138,4 @@ body.modal-open {
     object-position: center 46%;
   }
 }
-
-/* --------------------------------------------------------------------------
-   13. Accessibility & Motion Preferences
-   -------------------------------------------------------------------------- */
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-
-  .status-indicator {
-    animation: none !important;
-    opacity: 1 !important;
-  }
-
-  .dex-card:hover,
-  .dex-card:focus-visible {
-    transform: none !important;
-  }
-
-  .dex-card {
-    animation: none !important;
-  }
-}
+
