@@ -1,11 +1,3 @@
-/**
- * Cyberpunk: Edgerunners Dex
- *
- * Client-side script that fetches series data from `data/edgerunners.json`,
- * dynamically generates responsive character and megacorporation card galleries,
- * and handles an accessible modal dialog for inspecting in-depth dossiers.
- */
-
 // Global registry mapping each entry ID to its data object and category type ("character" or "corporation")
 const entriesMap = new Map();
 
@@ -40,7 +32,7 @@ async function loadData() {
 function renderPage(data) {
   // Set the browser tab title
   if (data.series && data.series.title) {
-    document.title = `${data.series.title} Dex`;
+    document.title = `${data.series.title}`;
   }
 
   // Populate the quick-lookup map so modals can find connected entries by ID
@@ -536,7 +528,39 @@ function buildCharacterModal(entry) {
       notice.appendChild(document.createTextNode(" Records unavailable."));
       section.appendChild(notice);
     } else {
-      section.appendChild(el("p", "modal-text", entry.fate));
+      const spoilerContainer = el("div", "spoiler-container");
+
+      const toggleBtn = el("button", "spoiler-toggle-btn");
+      toggleBtn.type = "button";
+      toggleBtn.setAttribute("aria-expanded", "false");
+      toggleBtn.setAttribute("aria-label", "Show character fate spoiler");
+
+      const btnIcon = el("span", "spoiler-btn-icon", "▶");
+      btnIcon.setAttribute("aria-hidden", "true");
+
+      const btnLabel = el("span", "spoiler-btn-label", "SHOW FATE");
+      const btnWarning = el("span", "spoiler-btn-warning", "// WARNING: CONTAINS SPOILERS");
+
+      toggleBtn.appendChild(btnIcon);
+      toggleBtn.appendChild(btnLabel);
+      toggleBtn.appendChild(btnWarning);
+
+      const content = el("div", "spoiler-content");
+      content.hidden = true;
+      content.appendChild(el("p", "modal-text fate-text", entry.fate));
+
+      toggleBtn.addEventListener("click", () => {
+        const isHidden = content.hidden;
+        content.hidden = !isHidden;
+        toggleBtn.setAttribute("aria-expanded", isHidden ? "true" : "false");
+        toggleBtn.classList.toggle("revealed", isHidden);
+        btnLabel.textContent = isHidden ? "HIDE FATE" : "SHOW FATE";
+        btnIcon.textContent = isHidden ? "▼" : "▶";
+      });
+
+      spoilerContainer.appendChild(toggleBtn);
+      spoilerContainer.appendChild(content);
+      section.appendChild(spoilerContainer);
     }
     frag.appendChild(section);
   }
