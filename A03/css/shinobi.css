@@ -1,0 +1,721 @@
+/* =============================================================
+   Shinobi Database — Design System
+   Hidden Leaf Historical Archive theme
+   Bootstrap 5.3.x overrides and custom tokens
+   ============================================================= */
+
+/* ── 1. Design Tokens ─────────────────────────────────────── */
+:root {
+  --color-parchment:   #E8D8B5;
+  --color-parchment-light: #F5EDD8;
+  --color-ink:         #242522;
+  --color-leaf:        #526B43;
+  --color-leaf-dark:   #3D5230;
+  --color-leaf-light:  #6A8A58;
+  --color-konoha-red:  #9D4439;
+  --color-sandstone:   #B69B70;
+  --color-dark-wood:   #403329;
+  --color-muted-text:  #5A5648;
+  --color-bg:          #FAF4E8;
+  --color-card-bg:     #FDF7ED;
+  --color-border:      #D4BC8A;
+
+  --font-body:   'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Cinzel', 'Palatino Linotype', Georgia, serif;
+
+  --radius-card: 0.5rem;
+  --shadow-card: 0 2px 8px rgba(64, 51, 41, 0.12);
+  --shadow-card-hover: 0 4px 16px rgba(64, 51, 41, 0.2);
+  --transition-fast: 0.18s ease;
+}
+
+/* ── 2. Base ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+
+a { color: var(--color-leaf); }
+a:hover { color: var(--color-leaf-dark); }
+
+/* ── 3. Navigation ────────────────────────────────────────── */
+.shinobi-nav {
+  background-color: var(--color-dark-wood);
+  border-bottom: 3px solid var(--color-konoha-red);
+}
+
+.shinobi-nav .navbar-brand {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--color-parchment) !important;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shinobi-nav .navbar-brand .brand-seal {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-konoha-red);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.shinobi-nav .nav-link {
+  color: var(--color-parchment) !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 4px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.shinobi-nav .nav-link:hover,
+.shinobi-nav .nav-link:focus {
+  background-color: rgba(232, 216, 181, 0.12);
+  color: #fff !important;
+}
+
+.shinobi-nav .nav-link.active {
+  background-color: var(--color-leaf);
+  color: #fff !important;
+}
+
+.shinobi-nav .navbar-toggler {
+  border-color: rgba(232, 216, 181, 0.4);
+}
+
+.shinobi-nav .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ── 4. Page Header ───────────────────────────────────────── */
+.page-header {
+  background-color: var(--color-dark-wood);
+  color: var(--color-parchment);
+  padding: 2.25rem 0 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-konoha-red), var(--color-sandstone), var(--color-konoha-red));
+  opacity: 0.6;
+}
+
+.page-header .page-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-sandstone);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 0.4rem;
+  color: var(--color-parchment);
+}
+
+.page-header .page-lead {
+  font-size: 0.9rem;
+  color: var(--color-sandstone);
+  max-width: 55ch;
+}
+
+/* ── 5. Cards ─────────────────────────────────────────────── */
+.shinobi-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.shinobi-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+  color: inherit;
+}
+
+.shinobi-card:focus-visible {
+  outline: 3px solid var(--color-leaf);
+  outline-offset: 2px;
+}
+
+.card-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-parchment);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Placeholder when no image available */
+.card-img-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--color-sandstone);
+  font-size: 2rem;
+}
+
+.card-img-placeholder .placeholder-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.shinobi-card .card-body {
+  padding: 1rem 1.1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.shinobi-card .card-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+
+.shinobi-card .card-meta {
+  font-size: 0.75rem;
+  color: var(--color-muted-text);
+}
+
+.card-id-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-konoha-red);
+  font-family: monospace;
+}
+
+/* ── 6. Homepage Category Cards ───────────────────────────── */
+.category-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 2rem 1.5rem 1.75rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--color-leaf);
+  transition: width var(--transition-fast);
+}
+
+.category-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+  color: inherit;
+  border-color: var(--color-sandstone);
+}
+
+.category-card:hover::before { width: 6px; }
+
+.category-card:focus-visible {
+  outline: 3px solid var(--color-leaf);
+  outline-offset: 3px;
+}
+
+.category-card .cat-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.category-card .cat-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.category-card .cat-desc {
+  font-size: 0.82rem;
+  color: var(--color-muted-text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.category-card .cat-arrow {
+  margin-top: auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-leaf);
+  letter-spacing: 0.03em;
+}
+
+/* ── 7. Search & Filter Bar ───────────────────────────────── */
+.search-bar {
+  background-color: var(--color-parchment-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 1rem 1.25rem;
+}
+
+.search-bar .form-control {
+  border-color: var(--color-sandstone);
+  background-color: #fff;
+  color: var(--color-ink);
+}
+
+.search-bar .form-control:focus {
+  border-color: var(--color-leaf);
+  box-shadow: 0 0 0 0.2rem rgba(82, 107, 67, 0.2);
+}
+
+.search-bar .form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-muted-text);
+}
+
+/* ── 8. Buttons ───────────────────────────────────────────── */
+.btn-shinobi {
+  background-color: var(--color-leaf);
+  border-color: var(--color-leaf);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.btn-shinobi:hover, .btn-shinobi:focus {
+  background-color: var(--color-leaf-dark);
+  border-color: var(--color-leaf-dark);
+  color: #fff;
+}
+
+.btn-shinobi:disabled {
+  background-color: var(--color-sandstone);
+  border-color: var(--color-sandstone);
+}
+
+.btn-outline-shinobi {
+  color: var(--color-leaf);
+  border-color: var(--color-leaf);
+  background: transparent;
+  font-weight: 600;
+}
+
+.btn-outline-shinobi:hover, .btn-outline-shinobi:focus {
+  background-color: var(--color-leaf);
+  border-color: var(--color-leaf);
+  color: #fff;
+}
+
+/* ── 9. Pagination ────────────────────────────────────────── */
+.shinobi-pagination .page-link {
+  color: var(--color-leaf);
+  border-color: var(--color-border);
+  background-color: var(--color-card-bg);
+  font-size: 0.875rem;
+}
+
+.shinobi-pagination .page-link:hover {
+  background-color: var(--color-parchment);
+  border-color: var(--color-sandstone);
+  color: var(--color-leaf-dark);
+}
+
+.shinobi-pagination .page-item.active .page-link {
+  background-color: var(--color-leaf);
+  border-color: var(--color-leaf);
+  color: #fff;
+}
+
+.shinobi-pagination .page-item.disabled .page-link {
+  color: var(--color-sandstone);
+  background-color: var(--color-card-bg);
+  border-color: var(--color-border);
+}
+
+/* ── 10. Feedback States ──────────────────────────────────── */
+.state-loading,
+.state-error,
+.state-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 220px;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.state-loading .spinner-icon {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-leaf);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.state-loading p { color: var(--color-muted-text); font-size: 0.9rem; }
+
+.state-error .error-icon { font-size: 2.5rem; }
+.state-error .error-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-konoha-red);
+}
+.state-error .error-msg { font-size: 0.85rem; color: var(--color-muted-text); max-width: 40ch; }
+
+.state-empty .empty-icon { font-size: 2.5rem; opacity: 0.5; }
+.state-empty p { color: var(--color-muted-text); font-size: 0.9rem; }
+
+/* ── 11. Detail Page Layout ───────────────────────────────── */
+.detail-hero {
+  background-color: var(--color-parchment-light);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2rem 0;
+}
+
+.detail-hero-img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--radius-card);
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.detail-hero-img-placeholder {
+  width: 180px;
+  height: 220px;
+  border-radius: var(--radius-card);
+  border: 2px solid var(--color-border);
+  background-color: var(--color-parchment);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: var(--color-sandstone);
+}
+
+.detail-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  color: var(--color-ink);
+}
+
+.detail-id {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-konoha-red);
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.detail-section {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.detail-section-title {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-konoha-red);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.detail-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.875rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--color-muted-text);
+  min-width: 110px;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+.detail-value { color: var(--color-ink); }
+
+/* Related record tags */
+.related-tag {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background-color: var(--color-parchment);
+  border: 1px solid var(--color-sandstone);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.related-tag:hover {
+  background-color: var(--color-leaf);
+  color: #fff;
+  border-color: var(--color-leaf);
+}
+
+/* ── 12. Back Link ────────────────────────────────────────── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-leaf);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  padding: 0.3rem 0;
+}
+
+.back-link:hover { color: var(--color-leaf-dark); text-decoration: underline; }
+
+/* ── 13. Footer ───────────────────────────────────────────── */
+.shinobi-footer {
+  background-color: var(--color-dark-wood);
+  border-top: 3px solid var(--color-konoha-red);
+  color: var(--color-sandstone);
+  padding: 1.5rem 0;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.shinobi-footer .footer-brand {
+  font-family: var(--font-display);
+  color: var(--color-parchment);
+  font-size: 0.9rem;
+}
+
+.shinobi-footer .footer-disclaimer {
+  font-size: 0.72rem;
+  color: rgba(182, 155, 112, 0.65);
+  margin-top: 0.4rem;
+}
+
+/* ── 14. Hero (homepage) ──────────────────────────────────── */
+.home-hero {
+  background-color: var(--color-dark-wood);
+  color: var(--color-parchment);
+  padding: 4rem 0 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 40px,
+    rgba(255,255,255,0.015) 40px,
+    rgba(255,255,255,0.015) 80px
+  );
+}
+
+.home-hero .hero-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-sandstone);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.home-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--color-parchment);
+  margin-bottom: 1rem;
+}
+
+.home-hero .hero-lead {
+  font-size: 1rem;
+  color: rgba(232, 216, 181, 0.8);
+  max-width: 55ch;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.home-hero .hero-cta {
+  background-color: var(--color-konoha-red);
+  border-color: var(--color-konoha-red);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.65rem 1.6rem;
+}
+
+.home-hero .hero-cta:hover {
+  background-color: #7E3730;
+  border-color: #7E3730;
+  color: #fff;
+}
+
+/* ── 15. Utilities ────────────────────────────────────────── */
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 1.5rem 0;
+}
+
+.text-muted-archive {
+  color: var(--color-muted-text) !important;
+  font-size: 0.8rem;
+}
+
+.badge-leaf {
+  background-color: var(--color-leaf);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.badge-red {
+  background-color: var(--color-konoha-red);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* Info popover button */
+.info-btn {
+  color: var(--color-sandstone);
+  line-height: 1;
+  transition: color var(--transition-fast);
+}
+.info-btn:hover,
+.info-btn:focus {
+  color: var(--color-leaf);
+}
+
+/* Info panel (custom popover — no Bootstrap Popover dependency) */
+#info-panel {
+  position: absolute;
+  z-index: 1080;
+  max-width: 280px;
+  padding: 0.65rem 0.85rem;
+  background: var(--color-parchment-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card-hover);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--color-ink);
+  line-height: 1.5;
+}
+#info-panel strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--color-leaf-dark);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+#info-panel a {
+  color: var(--color-leaf-dark);
+  text-underline-offset: 2px;
+}
+#info-panel a:hover {
+  color: var(--color-leaf);
+}
+
+/* ── 16. Responsive adjustments ───────────────────────────── */
+@media (max-width: 575.98px) {
+  .detail-label { min-width: 90px; }
+  .detail-hero-img,
+  .detail-hero-img-placeholder { width: 130px; height: 160px; }
+}
+
+/* ── 17. Focus styles (accessibility) ─────────────────────── */
+:focus-visible {
+  outline: 3px solid var(--color-leaf);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--color-leaf);
+  outline-offset: 2px;
+}
+
